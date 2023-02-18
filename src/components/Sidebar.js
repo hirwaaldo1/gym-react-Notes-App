@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Delete } from "react-feather";
 export default function Sidebar(props) {
   const noteElements = props.notes.map((note, index) => (
     <div key={note.id}>
@@ -17,8 +17,11 @@ export default function Sidebar(props) {
           {note.body.split("\n")[0]}
         </h4>
         {note.id === props.currentNote.id && (
-          <button className="bg-none border-none text-red-700 mr-4 hidden group-hover:block">
-            <i className="gg-trash trash-icon"></i>
+          <button
+            onClick={(event) => props.deleteNote(event, note.id)}
+            className="bg-none border-none text-red-700 mr-4 invisible group-hover:visible"
+          >
+            <Delete />
           </button>
         )}
       </div>
