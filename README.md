@@ -2,7 +2,7 @@
 
 ## Live version
 
-[Notes App on netlify](https://NotesApp.app/)
+[Notes App on netlify](https://deploy-preview-1--steady-gecko-200503.netlify.app/)
 
 ## Contents
 
