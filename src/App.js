@@ -57,7 +57,7 @@ export default function App() {
   return (
     <main>
       {notes.length > 0 ? (
-        <Split sizes={[30, 70]} direction="horizontal" className="split">
+        <Split sizes={[30, 70]} direction="horizontal" className="flex">
           <Sidebar
             notes={notes}
             currentNote={findCurrentNote()}
@@ -69,9 +69,12 @@ export default function App() {
           )}
         </Split>
       ) : (
-        <div className="no-notes">
+        <div className="w-full h-full flex flex-col justify-center items-center bg-white">
           <h1>You have no notes</h1>
-          <button className="first-note" onClick={createNewNote}>
+          <button
+            className="cursor-pointer bg-slate-600 border-none text-white rounded p-4"
+            onClick={createNewNote}
+          >
             Create one now
           </button>
         </div>
